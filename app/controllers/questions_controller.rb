@@ -1,4 +1,6 @@
 class QuestionsController < ApplicationController
+  before_filter :authorize, only: [:edit, :update]
+
   def index
     @questions = Question.all
   end
@@ -38,7 +40,7 @@ class QuestionsController < ApplicationController
     @question.destroy
     redirect_to questions_path
   end
-  
+
   private
   def question_params
     params.require(:question).permit(:user, :content)
