@@ -1,6 +1,8 @@
 <h1>Questions</h1>
 <ul>
   <% @questions.each do |question| %>
-    <li>By <%= question.user %> | <%= link_to question.content, question_path(question)%></li>
+    <li><%= link_to question.content, question_path(question)%> | by <%= question.user %></li>
   <% end %>
 </ul>
+
+<%= link_to "New Question", new_question_path %>
