@@ -1,2 +1,7 @@
-<h1><% @question.content %> by <% @question.user %></h1>
+<h1><%= @question.content %> by <%= @question.user %></h1>
 <p><%= link_to "Return to Questions", questions_path %></p>
+
+<p><%= link_to "Edit Question", edit_question_path(@question) %></p>
+<p><%= link_to "Delete Question", question_path(@question),
+                         :data => {:confirm => "You sure?",
+                                   :method => "delete"} %></p>
