@@ -4,7 +4,7 @@
 
 An app that allows a user to ask a quesiton and answer a quesiton. 
 
-By Maldon Meehan
+By Maldon Meehan & Bang Nguyen
 
 ## Description
 
